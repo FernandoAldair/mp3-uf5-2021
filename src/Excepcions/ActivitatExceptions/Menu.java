@@ -7,8 +7,7 @@ public class Menu {
         System.out.println("1.Crear usuario");
         System.out.println("2.Verificar DNI");
         System.out.println("3.Tranferencia");
-        System.out.println("4.Gestion de cuenta");
-        System.out.println("------------------");
+        System.out.println("");
         System.out.println("Seleccione la opcion deseada:");
     }
 
