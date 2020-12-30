@@ -1,5 +1,7 @@
 package Excepcions.ActivitatExceptions.Model;
 
+
+
 import Excepcions.ActivitatExceptions.Exceptions.BankAccountException;
 
 import java.util.List;
@@ -9,9 +11,10 @@ public class CompteEstalvi {
     private double saldo;
     private List<Client> llista_usuaris;
 
-    public CompteEstalvi(String numCompte) {
+    public CompteEstalvi(String numCompte, double saldo, List<Client> llistaUsuaris1) {
         this.numCompte = numCompte;
-        saldo = 0;
+        this.saldo = saldo;
+        this.llista_usuaris = llistaUsuaris1;
     }
 
     /**
@@ -60,6 +63,10 @@ public class CompteEstalvi {
 
     public double getSaldo() {
         return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 
     public List<Client> getLlista_usuaris() {

@@ -1,6 +1,8 @@
 package Excepcions.ActivitatExceptions.Model;
 
+
 import Excepcions.ActivitatExceptions.Control.OperacionsBanc;
+import Excepcions.ActivitatExceptions.Exceptions.ClientAccountException;
 
 public class Client {
     private String Nom;
@@ -10,8 +12,11 @@ public class Client {
     public Client(String nom, String cognoms, String DNI) {
         Nom = nom;
         Cognoms = cognoms;
-        if(OperacionsBanc.verifyDNI(DNI)) this.DNI = DNI;
-
+        try {
+            if(OperacionsBanc.verifyDNI(DNI)) this.DNI = DNI;
+        } catch (ClientAccountException e) {
+            e.printStackTrace();
+        }
     }
 
     public String getNom() {
@@ -37,7 +42,5 @@ public class Client {
     public void setDNI(String DNI) {
         this.DNI = DNI;
     }
-
-
 
 }

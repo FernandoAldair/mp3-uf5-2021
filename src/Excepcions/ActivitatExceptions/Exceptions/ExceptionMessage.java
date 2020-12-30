@@ -1,7 +1,6 @@
 package Excepcions.ActivitatExceptions.Exceptions;
 
 public class ExceptionMessage {
-
     //BANK ACCOUNT MESSAGES
     public static final String ACCOUNT_NOT_FOUND = "Compte inexistent";
     public static final String ACCOUNT_OVERDRAFT = "Compte al descobert";
@@ -12,6 +11,5 @@ public class ExceptionMessage {
 
     //OPERATIONS
     public static final String TRANSFER_ERROR = "Error en la transferència";
-
 
 }
